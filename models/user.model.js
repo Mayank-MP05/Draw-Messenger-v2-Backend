@@ -1,14 +1,24 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    lowercase: true,
+    validate: [validator.isEmail, "Enter a valid email address."],
   },
   fullName: {
     type: String,
   },
-  userName: String,
+  userName: {
+    type: String,
+    lowercase: true,
+    validate: [
+      validator.isAlphanumeric,
+      "Usernames may only have letters and numbers.",
+    ],
+  },
   dateOfBirth: Date,
   profilePicture: Number,
 });
