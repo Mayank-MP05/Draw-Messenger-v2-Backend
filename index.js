@@ -19,12 +19,13 @@ const group = require("./models/group.model");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json({}));
 
+const { saveMessageToDB } = require("./controllers/message.controller")
 io.on('connection', (socket) => {
   console.log('[INIT] Socket.io Connected!');
   socket.on('chat', (payload, callback) => {
     console.log(payload);
-    io.emit('chat', { ...payload, fromServer: true })
-    // callback("All Good from Server!");
+    saveMessageToDB(payload)
+    io.emit('chat', payload);
   })
 });
 

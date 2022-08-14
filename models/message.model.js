@@ -6,6 +6,9 @@ const messageSchema = new mongoose.Schema({
     type: String,
     enum: ["GIF", "LINK", "TEXT", "EMOJI", "DRAW"],
   },
+  content: {
+    type: String,
+  },
   gifContent: {
     url: String,
   },
