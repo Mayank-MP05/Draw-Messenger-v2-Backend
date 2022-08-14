@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 var ObjectId = require("mongodb").ObjectId;
 
 const Group = require("../models/group.model");
+const Message = require("../models/message.model");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -35,8 +36,16 @@ router.post("/getSingleGroup", (req, res) => {
   });
 });
 
-router.get("/getMessages", (req, res) => {
+router.post("/getMessages", (req, res) => {
+  const { groupId } = req.body
+  Message.find({}, (error, result) => {
+    if (error) {
+      console.log("ERROR: Single Group Message fetch Failed");
+      return res.status(500).json({ message: "Message Fetch failed", error });
+    }
 
+    return res.status(200).json(result);
+  });
 });
 
 router.post("/all", (req, res) => {

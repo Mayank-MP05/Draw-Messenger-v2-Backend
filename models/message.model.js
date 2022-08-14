@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
+const ObjectId = schema.ObjectId;
 const messageSchema = new mongoose.Schema({
   type: {
     type: String,
@@ -26,10 +27,10 @@ const messageSchema = new mongoose.Schema({
   fileContent: String,
   textContent: String,
   createdAt: Date,
-  groupId: schema.types.ObjectId,
-  userId: schema.types.ObjectId,
+  groupId: ObjectId,
+  userId: ObjectId,
 });
-module.exports = mongoose.model("User", messageSchema);
+module.exports = mongoose.model("Message", messageSchema);
 // user.create(
 //   {
 //     email: "test@test.com",
