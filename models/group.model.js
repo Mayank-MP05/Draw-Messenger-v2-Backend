@@ -10,7 +10,8 @@ const groupSchema = new mongoose.Schema({
     required: true,
   },
   description: String,
-  profilePic: Number,
+  profilePic: String,
+  tags: Array,
   createdAt: Date,
   createdBy: mongoose.Schema.Types.ObjectId,
 });

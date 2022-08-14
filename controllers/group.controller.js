@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
       console.log("ERROR: Group Fetch Failed");
       return res.status(500).json({ message: "Group Fetch failed", error });
     }
-    return res.json({
+    return res.status(200).json({
       groups: result,
     });
   });
