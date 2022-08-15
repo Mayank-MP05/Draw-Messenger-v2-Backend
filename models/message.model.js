@@ -12,12 +12,12 @@ const messageSchema = new mongoose.Schema({
   gifContent: {
     url: String,
   },
-  linkContent: {
-    title: String,
-    description: String,
-    url: String,
-    imgUrl: String,
-  },
+
+  title: String,
+  description: String,
+  linkExtracted: String,
+  imgUrl: String,
+
   textContent: {
     content: String,
   },

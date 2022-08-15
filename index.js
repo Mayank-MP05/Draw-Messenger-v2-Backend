@@ -19,13 +19,19 @@ const group = require("./models/group.model");
 const bodyParser = require("body-parser");
 app.use(bodyParser.json({}));
 
-const { saveMessageToDB } = require("./controllers/message.controller")
+const { saveMessageToDB, linkDataParser } = require("./controllers/message.controller")
 io.on('connection', (socket) => {
   console.log('[INIT] Socket.io Connected!');
   socket.on('chat', (payload, callback) => {
     console.log(payload);
-    saveMessageToDB(payload)
-    io.emit('chat', payload);
+    const { linkExtracted } = payload;
+    const { type, content } = payload;
+    if (type === 'LINK' && linkExtracted) {
+      linkDataParser(payload,io)
+    } else {
+      saveMessageToDB(payload)
+      io.emit('chat', payload);
+    }
   })
 });
 

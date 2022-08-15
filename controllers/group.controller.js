@@ -13,10 +13,9 @@ router.get("/", (req, res) => {
       return res.status(500).json({ message: "Group Fetch failed", error });
     }
     if (result.length !== 0) {
-      const group = result[0];
-      return res.status(200).json({ group });
+      return res.status(200).json({ groups: result });
     }
-    return res.status(400).json({ message: "No record found!" });
+    return res.status(200).json({ groups: [] });
 
   });
 });
