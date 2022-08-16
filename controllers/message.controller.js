@@ -2,7 +2,7 @@ const Message = require("../models/message.model");
 const { parser } = require('html-metadata-parser');
 
 const linkDataParser = (messageObj, io) => {
-    const { linkExtracted } = messageObj;
+    const { linkExtracted, groupId } = messageObj;
     const { type, content } = messageObj;
     if (type === 'LINK' && linkExtracted) {
         parser(linkExtracted).then(result => {

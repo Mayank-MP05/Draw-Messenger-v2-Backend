@@ -24,10 +24,10 @@ io.on('connection', (socket) => {
   console.log('[INIT] Socket.io Connected!');
   socket.on('chat', (payload, callback) => {
     console.log(payload);
-    const { linkExtracted } = payload;
+    const { linkExtracted, groupId } = payload;
     const { type, content } = payload;
     if (type === 'LINK' && linkExtracted) {
-      linkDataParser(payload,io)
+      linkDataParser(payload, io)
     } else {
       saveMessageToDB(payload)
       io.emit('chat', payload);
