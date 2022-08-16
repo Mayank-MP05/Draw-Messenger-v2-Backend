@@ -2,6 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 var ObjectId = require("mongodb").ObjectId;
 
+// const redis = require("redis");
+// const redisClient = redis.createClient({
+//   host: '127.0.0.1',
+//   port: 6379 // Default redis port
+// });
+// (async () => { await redisClient.connect(); })()
+
+
 const Group = require("../models/group.model");
 const Message = require("../models/message.model");
 const router = express.Router();
