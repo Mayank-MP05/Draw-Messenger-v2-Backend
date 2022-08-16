@@ -45,7 +45,7 @@ router.post("/getSingleGroup", (req, res) => {
 
 router.post("/getMessages", (req, res) => {
   const { groupId } = req.body
-  Message.find({}, (error, result) => {
+  Message.find({ groupId: groupId }, (error, result) => {
     if (error) {
       console.log("ERROR: Single Group Message fetch Failed");
       return res.status(500).json({ message: "Message Fetch failed", error });
