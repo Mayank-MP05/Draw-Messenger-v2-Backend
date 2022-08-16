@@ -20,7 +20,17 @@ const userSchema = new mongoose.Schema({
     ],
   },
   dateOfBirth: Date,
-  profilePicture: Number,
+  emailVerified: Boolean,
+  isAnonymous: {
+    type: Boolean,
+    default: false
+  },
+  createdAt: Date,
+  lastLoginAt: Date,
+  profilePic: {
+    type: String,
+    default: "https://www.citypng.com/public/uploads/preview/png-round-blue-contact-user-profile-icon-11639786938sxvzj5ogua.png"
+  }
 });
 module.exports = mongoose.model("User", userSchema);
 // user.create(
