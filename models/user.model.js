@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  aboutMe: {
+    type: String,
+    default: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt`,
+  },
   createdAt: Date,
   lastLoginAt: Date,
   profilePic: {

@@ -13,7 +13,9 @@ router.post("/auth", (req, res) => {
     createdAt,
     lastLoginAt,
     phoneNumber,
-    photoURL } = req.body;
+    photoURL,
+    isAnonymous,
+    aboutMe } = req.body;
   const query = { email },
     update = {
       email,
@@ -23,7 +25,9 @@ router.post("/auth", (req, res) => {
       createdAt,
       lastLoginAt,
       phoneNumber,
-      profilePic: photoURL
+      profilePic: photoURL,
+      isAnonymous,
+      aboutMe
     },
     options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
