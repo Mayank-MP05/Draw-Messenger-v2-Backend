@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "62e021cc4ed71e632d9d7c42"
+  },
+  "name": "Software Engineering Growth Forum",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658855884908"
+    }
+  },
+  "createdBy": {
+    "$oid": "62e01d89b39acc922137766c"
+  },
+  "__v": 0,
+  "description": "This group focuses on applying the principles of engineering to software development. As SDE role includes analyzing and modifying existing software as well as designing, constructing and testing end-user applications that meet user needs. We help you build all SDEs better world",
+  "profilePic": "https://cdn-icons-png.flaticon.com/512/5737/5737189.png",
+  "tags": [
+    "Software",
+    "SDE",
+    "Growth",
+    "Career"
+  ]
+},{
+  "_id": {
+    "$oid": "62f15a9397679324f1d8e2ce"
+  },
+  "name": "Non-Fiction Books Readers Forum",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658855884908"
+    }
+  },
+  "createdBy": {
+    "$oid": "62e01d89b39acc922137766c"
+  },
+  "__v": 0,
+  "description": "Books are humans best friends. Growth books are all about change. A change of habits, character traits, or your physical appearance – you name it. The thing is, you have to make the change yourself for living more meaningful life",
+  "profilePic": "https://cdn-icons-png.flaticon.com/512/1459/1459381.png",
+  "tags": [
+    "Growth",
+    "Productivity",
+    "Books"
+  ]
+},{
+  "_id": {
+    "$oid": "62f15ba997679324f1d8e2cf"
+  },
+  "name": "Stick Figures Drawing Fan Bois",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658855884809"
+    }
+  },
+  "createdBy": {
+    "$oid": "62e01d89b39acc922137766c"
+  },
+  "__v": 0,
+  "description": "This group is all about fun. We all love stickman and his ability to make us laugh and explain complicated concepts. This group is tribute to stickman",
+  "profilePic": "https://cdn-icons-png.flaticon.com/512/58/58001.png",
+  "tags": [
+    "Draw",
+    "Creativity",
+    "BackToSchool",
+    "Fun",
+    "SchoolTime"
+  ]
+}]

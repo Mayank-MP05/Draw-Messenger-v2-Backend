@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "62e01f1d091f0a58c581df7c"
+  },
+  "email": "test@test.com",
+  "fullName": "Full name one",
+  "userName": "test",
+  "dateOfBirth": {
+    "$date": {
+      "$numberLong": "1658855197714"
+    }
+  },
+  "profilePicture": 7,
+  "__v": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659980106918"
+    }
+  },
+  "emailVerified": false,
+  "lastLoginAt": {
+    "$date": {
+      "$numberLong": "1660664128677"
+    }
+  },
+  "profilePic": "https://lh3.googleusercontent.com/a-/AFdZucph7P7dxbDLtWjdx-fowulNKoryPav0NYoNISeeWA=s96-c"
+},{
+  "_id": {
+    "$oid": "62fbcb85373b1f72c9bc8e31"
+  },
+  "email": "apple12345678ios@gmail.com",
+  "__v": 0,
+  "aboutMe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659980106918"
+    }
+  },
+  "emailVerified": true,
+  "fullName": "Narendra Modi",
+  "isAnonymous": true,
+  "lastLoginAt": {
+    "$date": {
+      "$numberLong": "1663696556208"
+    }
+  },
+  "profilePic": "https://lh3.googleusercontent.com/a-/AFdZucph7P7dxbDLtWjdx-fowulNKoryPav0NYoNISeeWA=s96-c",
+  "userName": "apple12345678ios"
+},{
+  "_id": {
+    "$oid": "62fc79aa9f41d07e29100514"
+  },
+  "email": "mayank.pachpande@earlysalary.com",
+  "__v": 0,
+  "aboutMe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1659026347432"
+    }
+  },
+  "emailVerified": true,
+  "fullName": "Mayank Pachpande",
+  "isAnonymous": false,
+  "lastLoginAt": {
+    "$date": {
+      "$numberLong": "1660719757075"
+    }
+  },
+  "profilePic": "https://lh3.googleusercontent.com/a/AItbvmnkcnftBKPV55E7zVBRDEpV6HH_bFkkQQ8kY6HR=s96-c",
+  "userName": "mayank.pachpande"
+}]
