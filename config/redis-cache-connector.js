@@ -3,6 +3,9 @@
  * @module redis-cache-connector
  */
 
+const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
+const REDIS_PORT = process.env.REDIS_PORT;
+
 const redis = require("redis");
 
 /**
@@ -21,8 +24,8 @@ const createSingletonRedisClient = () => {
     if (!redisClient) {
         console.log("[INIT] Redis Server Started");
         redisClient = redis.createClient({
-            host: '127.0.0.1',
-            port: 6379 // Default redis port
+            host: REDIS_HOSTNAME,
+            port: REDIS_PORT // Default redis port
         });
 
         asyncConnectRedis(redisClient);

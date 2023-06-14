@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
  * The MongoDB URI to connect to. This variable should be exported to a .env file later.
  * @type {string}
  */
-const MONGODB_URI = "mongodb://localhost:27017/draw-messenger";
+const MONGODB_URI = process.env.MONGO_DB_URI;
 
 /**
  * Checks the connection to the MongoDB database using Mongoose.
