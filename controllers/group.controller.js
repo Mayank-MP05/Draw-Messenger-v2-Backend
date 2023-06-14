@@ -2,16 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 var ObjectId = require("mongodb").ObjectId;
 
-const redis = require("redis");
-const redisClient = redis.createClient({
-  host: '127.0.0.1',
-  port: 6379 // Default redis port
-});
-(async () => { await redisClient.connect(); console.log("[INIT] Redis Server Started"); })()
-
-
 const Group = require("../models/group.model");
 const Message = require("../models/message.model");
+const redisClient = require("../config/redis-cache-connector");
 const router = express.Router();
 
 router.get("/", (req, res) => {
