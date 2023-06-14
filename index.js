@@ -11,7 +11,7 @@ const server = app.listen(9001);
 const io = new Server(server, { cors: { origin: '*' } });
 
 const port = 9000;
-const connection = require("./db/db-connect");
+const connection = require("./config/mongo-db-connector.js");
 const user = require("./models/user.model");
 const group = require("./models/group.model");
 
