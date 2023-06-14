@@ -18,6 +18,19 @@ This is the backend project for Draw Messenger, a text and drawing chat applicat
 - Redis: An in-memory data structure store used for caching and high-performance data manipulation.
 - Socket.IO: A JavaScript library that enables real-time, bidirectional communication between the server and clients.
 
+## Redis Cache Optimization
+
+
+
+##### Without Redis Cache (8.7ms)
+![Without Redis Cache (8.7ms)](https://github.com/Mayank-MP05/Draw-Messenger-v2-Backend/blob/master/docs/without-redis-cache-8.7ms.png?raw=true)
+
+##### With Redis Cache (3ms)
+![With Redis Cache (3ms)](https://github.com/Mayank-MP05/Draw-Messenger-v2-Backend/blob/master/docs/with-redis-cache-3ms.png?raw=true)
+
+##### Redis Key Hit
+![Redis Key Hit](https://github.com/Mayank-MP05/Draw-Messenger-v2-Backend/blob/master/docs/redis-key-hit.png?raw=true)
+
 ## Prerequisites
 
 Before running this backend project, ensure that you have the following software installed on your machine:
@@ -34,7 +47,7 @@ Follow these steps to run the backend project:
 1. Clone the repository:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Mayank-MP05/Draw-Messenger-v2-Backend.git
 ```
 
 2. Navigate to the project directory:
@@ -55,28 +68,28 @@ npm install
 npm start
 ```
 
-5. Start the server. The backend server should now be running on http://localhost:8000.
+5. Start the server. The backend server should now be running on http://localhost:9000.
 
 ## Configuration
 
 The application requires configuration settings for the MongoDB and Redis connections. Update the following configuration files with your database and cache details:
 
-A. MongoDB configuration: `config/database.js`
+A. MongoDB configuration: `.env.qa`
 
 ```js
 module.exports = {
   // Update the MongoDB connection URL
-  url: "mongodb://localhost:27017/draw-messenger",
+  url: process.env.MONGO_DB_URI,
 };
 ```
 
-B. Redis configuration: `config/redis.js`
+B. Redis configuration: `.env.qa`
 
 ```js
 module.exports = {
   // Update the Redis connection details
-  host: "localhost",
-  port: 6379,
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
 };
 ```
 
@@ -96,7 +109,7 @@ The backend project exposes the following API routes:
 
 ## WebSocket
 
-The WebSocket functionality is implemented using Socket.IO. The server listens for WebSocket connections on the same HTTP server running on `http://localhost:3000`.
+The WebSocket functionality is implemented using Socket.IO. The server listens for WebSocket connections on the same HTTP server running on `http://localhost:9001`.
 
 ## Acknowledgements
 
