@@ -1,8 +1,32 @@
+/**
+ * @file This file exports a function that connects to a MongoDB database using Mongoose.
+ * @requires mongoose
+ */
+
 const mongoose = require("mongoose");
-//FIXME: Export this variable to dot env later
+
+/**
+ * The MongoDB URI to connect to. This variable should be exported to a .env file later.
+ * @type {string}
+ */
 const MONGODB_URI = "mongodb://localhost:27017/draw-messenger";
 
-mongoose.connect(MONGODB_URI, (err) => {
-  if (err) console.log("MongoDB Connection ERROR: ", err);
-  else console.log("MongoDB Connection SUCCESS");
-});
+/**
+ * Checks the connection to the MongoDB database using Mongoose.
+ * @function
+ * @name mongoConnectionCheck
+ * @returns {void}
+ */
+const mongoConnectionCheck = () => {
+  console.log('[INFO] Checking connection to MongoDB...');
+  mongoose.connect(MONGODB_URI, (err) => {
+    if (err) {
+      console.log("[ERROR]  MongoDB Connection error: ", err);
+      return;
+    }
+    console.log("[INFO] MongoDB Connection success");
+  });
+}
+
+// Call the function to check the connection to the MongoDB database.
+mongoConnectionCheck();
